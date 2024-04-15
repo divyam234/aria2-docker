@@ -12,7 +12,7 @@ RUN curl -s https://sh-install.vercel.app/abcfy2/aria2-static-build?as=aria2c | 
 
 RUN curl -s https://sh-install.vercel.app/bhunter17/foundation-source?as=mkclean | bash
 
-RUN curl -s https://sh-install.vercel.app/rclone-mod?as=rclone | bash 
+RUN curl -s https://sh-install.vercel.app/divyam234/rclone-mod?private=1 | bash 
 
 RUN curl -s https://sh-install.vercel.app/cloudflare/cloudflared?as=cloudflared | bash
 
