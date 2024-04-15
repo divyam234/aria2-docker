@@ -1,18 +1,8 @@
-FROM golang:alpine as builder
+FROM alpine as builder
 
 ARG GITHUB_TOKEN
 
 RUN apk add --no-cache ca-certificates git tar xz bash curl make unzip tzdata && update-ca-certificates
-
-WORKDIR /app
-
-COPY go.mod .
-
-RUN go mod download && go mod verify
-
-COPY . .
-
-RUN make build
 
 WORKDIR /app/bin
 
