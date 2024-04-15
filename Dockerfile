@@ -21,7 +21,7 @@ RUN curl -s -LO "https://www.7-zip.org/a/7z2301-linux-x64.tar.xz" && mkdir ./7zi
 
 FROM alpine
 
-RUN apk add --no-cache bash curl jq
+RUN apk add --no-cache bash curl jq util-linux pciutils coreutils binutils findutils grep
 
 RUN adduser -D -u 1000 -h /home/user user
 
