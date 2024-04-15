@@ -24,8 +24,6 @@ if [ "${RUN_CF_TUNNEL}" != "" ]; then
 cloudflared tunnel run &
 fi
 
-worker &
-
 wait -n
 
 exit $?
