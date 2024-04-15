@@ -53,4 +53,4 @@ ENV SSL_CERT_FILE /etc/ssl/certs/ca-certificates.crt
 
 RUN chmod +x $HOME/app/scripts/**/*.sh  $HOME/app/scripts/*.sh
 
-ENTRYPOINT [ "$HOME/app/scripts/start.sh" ]
+ENTRYPOINT [ "bash","$HOME/app/scripts/start.sh" ]
