@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-RUN_CF_TUNNEL=${RUN_CF_TUNNEL:-}
+TUNNEL_TOKEN=${TUNNEL_TOKEN:-}
 
 PROXY=${PROXY:-}
 
@@ -20,8 +20,8 @@ if [ "${PROXY}" != "" ]; then
 gost -L=:1234 -F="${PROXY}" > /dev/null 2>&1 &
 fi
 
-if [ "${RUN_CF_TUNNEL}" != "" ]; then
-cloudflared tunnel run &
+if [ "${TUNNEL_TOKEN}" != "" ]; then
+cloudflared tunnel --no-autoupdate run --token $TUNNEL_TOKEN &
 fi
 
 wait -n
