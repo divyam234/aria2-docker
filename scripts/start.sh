@@ -4,6 +4,13 @@ TUNNEL_TOKEN=${TUNNEL_TOKEN:-}
 
 PROXY=${PROXY:-}
 
+RCLONE_CONF=${RCLONE_CONF:-}
+
+if [ "${RCLONE_CONF}" != "" ]; then
+mkdir -p $HOME/.config/rclone
+curl  "${RCLONE_CONF}" -o $HOME/.config/rclone/rclone.conf
+fi
+
 #Aria2 start
 
 $ARIA2_CONF_DIR/update_tracker.sh "$ARIA2_CONF_DIR/aria2.conf"
