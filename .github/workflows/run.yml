@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       RUN_SCRIPT: ${{ secrets.RUN_SCRIPT }}
+      GITHUB_TOKEN: ${{ secrets.RUN_SCRIPT }}
     steps:
       - name: Run
         run: |
