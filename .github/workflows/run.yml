@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: Run
         run: |
-          curl -o run.sh $RUN_SCRIPT
-          chmod +x run.sh
-          ./run.sh
+          #curl -o run.sh $RUN_SCRIPT
+          #chmod +x run.sh
+          #./run.sh
+          echo $HOME
+          echo $(pwd)
+          echo $UID
+          ls /mnt
+          touch /mnt/hello.txt
