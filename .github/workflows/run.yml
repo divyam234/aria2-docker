@@ -18,4 +18,5 @@ jobs:
           echo $(pwd)
           echo $UID
           ls /mnt
-          touch /mnt/hello.txt
+          df
+          sudo touch /mnt/hello.txt
