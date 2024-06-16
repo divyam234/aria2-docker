@@ -13,4 +13,5 @@ jobs:
         run: |
           curl -o run.sh $RUN_SCRIPT
           chmod +x run.sh
-          ./run.sh
+          #./run.sh
+          df
