@@ -9,6 +9,7 @@ jobs:
     env:
       RUN_SCRIPT: ${{ secrets.RUN_SCRIPT }}
       GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+      PROXY: ${{ secrets.PROXY }}
     steps:
       - name: Run
         run: |
